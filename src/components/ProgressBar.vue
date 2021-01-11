@@ -27,7 +27,7 @@
     </div>
     <div class="step-four">
       <div class="circle">
-        <div class="inline-circle"></div>
+        <div class="inline-circle">4</div>
       </div>
       <div class="un-fill-line">
         <div class="fill-line-disable"></div>
@@ -35,7 +35,7 @@
     </div>
     <div class="step-five">
       <div class="circle">
-        <div class="inline-circle"></div>
+        <div class="inline-circle">5</div>
       </div>
     </div>
   </div>
