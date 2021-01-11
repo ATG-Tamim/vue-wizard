@@ -47,6 +47,10 @@ body {
       width: 10%;
       user-select: none;
       display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 700;
+      color: $primary;
     }
 
     .header-links {

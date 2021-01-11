@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="logo">
-      <!-- <img src="./../assets/images/logo.svg" alt="startGlobal"> -->
+      <div>hello world</div>
     </div>
     <div class="header-links">
       <div class="active">
