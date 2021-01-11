@@ -1,22 +1,24 @@
 <template>
   <headerSection/>
   <progressBar/>
+  <div class="white-space"></div>
+  <step-one/>
 </template>
 
 <script>
 import HeaderSection from './components/Header'
-import progressBar from './components/ProgressBar'
+import ProgressBar from './components/ProgressBar'
+import StepOne from './views/StepOne'
 
 export default {
   components: {
     HeaderSection,
-    progressBar
+    ProgressBar,
+    StepOne
   },
 
-  data() {
+  data(){
     return {
-      variable: '38',
-      fillActive: '',
     }
   },
 

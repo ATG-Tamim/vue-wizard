@@ -216,5 +216,118 @@ body {
       }
     }
   }
+
+  .steps-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: $textSecondaryDark;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .steps-para {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: $textSecondaryDark;
+  }
+
+  .steps {
+    display: flex;
+    width: 80%;
+    float: right;
+    justify-content: space-around;
+
+    .formSection {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      .input-form {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        overflow: hidden;
+      }
+    }
+
+    .step3 {
+      width: 60%;
+
+      p {
+        padding-right: 150px;
+      }
+
+      .input-form {
+        align-items: center;
+        width: 48%;
+        justify-content: space-between;
+      }
+
+      label {
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        width: 25%;
+        padding: 10px 0 10px 10px ;
+      }
+    }
+
+    .step4 {
+      width: 43%;
+    }
+
+    .step5 {
+      .input-form {
+        width: 90%;
+        justify-content: space-between;
+      }
+    }
+
+    .illustration-one {
+      width: 50%;
+      margin: -50px 0 0 0;
+
+      img {
+        width: 464px;
+      }
+    }
+
+    .illustration2 {
+      width: 50%;
+      margin: -50px 0 0 0;
+
+      img {
+        width: 430px;
+        margin-top: -25px;
+      }
+    }
+
+    .illustration3 {
+      width: 40%;
+      margin: -50px 0 0 -20px;
+
+      img {
+        width: 320px;
+        margin-top: 10px;
+      }
+    }
+
+    .illustration4 {
+      width: 40%;
+      margin: -100px 0 0 -20px;
+
+      img {
+        width: 370px;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
