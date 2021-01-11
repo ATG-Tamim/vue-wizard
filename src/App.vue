@@ -1,8 +1,8 @@
 <template>
   <headerSection/>
   <progressBar/>
-  <div class="white-space"></div>clear
-  <step-four/>
+  <div class="white-space"></div>
+  <step-five/>
 </template>
 
 <script>
@@ -12,6 +12,7 @@ import StepOne from './views/StepOne'
 import StepTwo from './views/StepTwo'
 import StepThree from './views/StepThree'
 import StepFour from './views/StepFour'
+import StepFive from './views/StepFive'
 
 export default {
   components: {
@@ -20,7 +21,8 @@ export default {
     StepOne,
     StepTwo,
     StepThree,
-    StepFour
+    StepFour,
+    StepFive
   },
 
   data(){
