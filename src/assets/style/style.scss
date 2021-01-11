@@ -1,0 +1,131 @@
+@import './variables';
+@import './components';
+@import './mixins';
+
+@font-face {
+  src: url(../font/Camphor/camphorRegular.ttf);
+  font-family: camBold;
+}
+
+@font-face {
+  src: url(../font/Camphor/camphorLight.ttf);
+  font-family: camLight;
+}
+
+@font-face {
+  src: url(../font/Camphor/camphorBold.ttf);
+  font-family: camBold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  // position: relative;
+  width: 100%;
+  min-width: 100vh;
+  font-family: 'camRegular','camLight','camBold' !important;
+
+  .whiteSpace {
+    width: 80%;
+    float: left;
+    height: 150px;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f6f6f6;
+
+    .logo {
+      width: 10%;
+      user-select: none;
+      display: flex;
+    }
+
+    .header-links {
+      display: flex;
+      width: 30%;
+      align-items: center;
+      justify-content: space-around;
+      font-weight: 400;
+      cursor: pointer;
+      user-select: none;
+      color: $textSecondaryDark;
+
+      .active {
+        color: $black;
+        font-weight: bold;
+        position: relative;
+        padding: 23px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .active-line {
+          width: 100%;
+          padding: 2px 0;
+          background-color: $primary;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 14%;
+
+      .basket-icon {
+        width: 20%;
+        margin-top: 13px;
+
+        img {
+          width: 30px;
+        }
+      }
+
+      .profile-options {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        justify-content: space-around;
+
+        .profile-pic {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 15px;
+          font-weight: 700;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          border-radius: 50%;
+          color: $white;
+          background: $textSecondaryDark;
+        }
+
+        .profile-name {
+          font-size: 16px;
+          font-weight: 700;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 7px;
+            right: -15px;
+          }
+        }
+      }
+    }
+  }
+}
+
