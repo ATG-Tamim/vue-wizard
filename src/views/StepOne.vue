@@ -1,6 +1,6 @@
 <template>
   <div class="steps">
-    <div class="formSection">
+    <div class="form-section">
       <h2 class="steps-text">Step 1</h2>
       <h1 class="title">Welcome!Enter your ZIP code to start.</h1>
       <p
