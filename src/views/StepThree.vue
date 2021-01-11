@@ -1,6 +1,6 @@
 <template>
   <div class="steps">
-    <div class="form-section step3">
+    <div class="form-section step-three">
       <h2 class="steps-text">Step 3</h2>
       <h1
         class="title"
