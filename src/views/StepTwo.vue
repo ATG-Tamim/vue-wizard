@@ -19,7 +19,7 @@
         </button>
       </div>
     </div>
-    <div class="illustration2">
+    <div class="illustration-two">
       <img src="./../assets/images/step2Illustration.png" alt />
     </div>
   </div>
