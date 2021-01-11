@@ -1,0 +1,329 @@
+@import './variables';
+@import './components';
+@import './mixin';
+
+@font-face {
+    src: url(../font/Camphor/camphorRegular.ttf);
+    font-family: camBold;
+}
+
+@font-face {
+    src: url(../font/Camphor/camphorLight.ttf);
+    font-family: camLight;
+}
+
+@font-face {
+    src: url(../font/Camphor/camphorBold.ttf);
+    font-family: camBold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    // position: relative;
+    width: 100%;
+    min-width: 100vh;
+    font-family: 'camRegular','camLight','camBold' !important;
+
+    .whiteSpace {
+        width: 80%;
+        float: left;
+        height: 150px;
+    }
+    .header {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #f6f6f6;
+
+        .logo {
+            width: 10%;
+            user-select: none;
+            display: flex;
+        }
+
+        .header-links {
+            display: flex;
+            width: 30%;
+            align-items: center;
+            justify-content: space-around;
+            font-weight: 400;
+            cursor: pointer;
+            user-select: none;
+            color: $textSecondaryDark;
+
+            .active {
+                color: $black;
+                font-weight: bold;
+                position: relative;
+                padding: 23px 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .active-line {
+                    width: 100%;
+                    padding: 2px 0;
+                    background-color: $primary;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 14%;
+
+            .basket-icon {
+                width: 20%;
+                margin-top: 13px;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            .profile-options {
+                display: flex;
+                align-items: center;
+                width: 60%;
+                justify-content: space-around;
+
+                .profile-pic {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 15px;
+                    font-weight: 700;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    color: $white;
+                    background: $textSecondaryDark;
+                }
+
+                .profile-name {
+                    font-size: 16px;
+                    font-weight: 700;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 7px;
+                        right: -15px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .progressBar {
+        width: 10%;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        padding: 20px 0 0 0;
+        flex-direction: column;
+        padding: 20px;
+
+        .outlineCircle {
+            width: 36px;
+            width: 36px;
+            height: 36px;
+            border: 2px solid $primary;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .5s ease-in;
+        }
+
+        .step1, .step2, .step3, .step4, .step5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(0 ,0);
+
+            .inlineCircle {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: $textSecondary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .activeCircle {
+                background:$primary !important;
+            }
+        }
+
+        .unfillLine {
+            width: 3px;
+            height: 80px;
+            background: $textSecondary;
+            
+            .fillLineDisable {
+                width: 3px;
+                height: 88px;
+                margin-top: -4px;
+                background: $textSecondary !important;
+            }
+            
+            .fillLine {
+                width: 3px;
+                height: 40px;
+                background: $primary;
+                transition: height 1s ease-in;
+            }
+
+            .fillLineActive {
+                width: 3px;
+                height: 84px;
+                background: $primary;
+                margin-top: -4px;
+            }
+        }
+    }
+
+    .steps-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: $textSecondaryDark;
+        margin-bottom: 40px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+    .steps-para {
+        font-size: 16px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        color: $textSecondaryDark;
+    }
+
+    .steps {
+        display: flex;
+        width: 80%;
+        float: right;
+        justify-content: space-around;
+
+        .formSection {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+
+            .inputForm {
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                overflow: hidden;
+            }
+        }
+
+        .step3 {
+            width: 60%;
+
+            p {
+                padding-right: 150px;
+            }
+
+            .inputForm {
+                align-items: center;
+                width: 48%;
+                justify-content: space-between;
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            input[type="text"] {
+                width: 25%;
+                padding: 10px 0 10px 10px ;
+            }
+        }
+
+        .step4 {
+            width: 43%;
+        }
+
+        .step5 {
+            .inputForm {
+                width: 90%;
+                justify-content: space-between;
+            }
+        }
+
+        .illustration1 {
+            width: 50%;
+            margin: -50px 0 0 0;
+
+            img {
+                width: 464px;
+            }
+        }
+
+        .illustration2 {
+            width: 50%;
+            margin: -50px 0 0 0;
+
+            img {
+                width: 430px;
+                margin-top: -25px;
+            }
+        }
+
+        .illustration3 {
+            width: 40%;
+            margin: -50px 0 0 -20px;
+
+            img {
+                width: 320px;
+                margin-top: 10px;
+            }
+        }
+
+        .illustration4 {
+            width: 40%;
+            margin: -100px 0 0 -20px;
+
+            img {
+                width: 370px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
