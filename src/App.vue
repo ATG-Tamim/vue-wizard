@@ -2,7 +2,7 @@
   <headerSection/>
   <progressBar/>
   <div class="white-space"></div>
-  <step-five/>
+  <router-view/>
 </template>
 
 <script>
