@@ -1,6 +1,7 @@
 @import './variables';
 @import './components';
 @import './mixins';
+@import './transitions';
 
 @font-face {
   src: url(../font/Camphor/camphorRegular.ttf);
@@ -210,6 +211,7 @@ body {
         background-color: $primary;
       }
     }
+  }
 
   .steps-text {
     font-size: 20px;
