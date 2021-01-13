@@ -1,8 +1,12 @@
 <template>
   <headerSection/>
-  <progressBar/>
-  <div class="white-space"></div>
-  <router-view/>
+  <div class="flex position-relative">
+    <progressBar :circlePosition="circlePosition"/>
+    <div>
+      <div class="white-space"></div>
+      <router-view/>
+    </div>
+  </div>
 
 </template>
 
@@ -30,15 +34,11 @@ export default {
 
   data(){
     return {
+      circlePosition: '38'
     }
   },
 
   methods: {
-    handle() {
-      this.fillActive = true
-      this.variable = ''
-      this.variable = this.variable + (38 + 116);
-    }
   }
 }
 </script>

@@ -1,42 +1,31 @@
 <template>
   <div class="progress-bar">
-    <div class="outline-circle" :style="`transform: translate(0, ${variable}px)`"></div>
-      <div class="step-one" @click="stepOne">
-        <div class="circle">
-          <div class="inline-circle active-circle">1</div>
+    <div class="outline-circle" ref="outlineCircle"></div>
+    <div class="progress-line">
+      <div class="active" ref="activeLine"></div>
+    </div>
+      <div class="step step-one active-circle" @click="stepOne">
+        <div class="inline-circle" ref="activeStepOne">
+          1
         </div>
-        <div class="un-fill-line">
-          <div id="step-one" class="fill-line" ref="step-one"></div>
-        </div>
       </div>
-    <div class="step-two" @click="stepTwo">
-      <div class="circle">
-        <div class="inline-circle" ref="circle-two">2</div>
-      </div>
-      <div class="un-fill-line">
-        <div class="fill-line-disable" ref="step-two"></div>
+    <div class="step step-two" @click="stepTwo">
+      <div class="inline-circle" ref="activeStepTwo">
+        2
       </div>
     </div>
-    <div class="step-three" @click="stepThree">
-      <div class="circle">
-        <div class="inline-circle">3</div>
-      </div>
-      <div class="un-fill-line">
-        <div class="fill-line-disable"></div>
+    <div class="step step-three" @click="stepThree">
+      <div class="inline-circle" ref="activeStepThree">
+        3
       </div>
     </div>
-    <div class="step-four" @click="stepFour">
-      <div class="circle">
-        <div class="inline-circle">4</div>
-      </div>
-      <div class="un-fill-line">
-        <div class="fill-line-disable"></div>
+    <div class="step step-four" @click="stepFour">
+      <div class="inline-circle" ref="activeStepFour">
+        4
       </div>
     </div>
-    <div class="step-five" @click="stepFive">
-      <div class="circle">
-        <div class="inline-circle">5</div>
-      </div>
+    <div class="step step-five" @click="stepFive">
+        <div class="inline-circle" ref="activeStepFive">5</div>
     </div>
   </div>
 </template>
@@ -44,9 +33,15 @@
 <script>
 export default {
 
+  data() {
+    return {
+    }
+  },
+
   methods: {
     stepOne() {
       this.$router.push('/')
+      console.log(this.$refs.outlineCircle.style)
     },
     stepTwo() {
       this.$router.push('/step-two')
@@ -62,19 +57,8 @@ export default {
     }
   },
 
-  watch: {
-    fillActive: function (val) {
-      if (this.fillActive) {
-        this.$refs.step - one.classList.add("fill-line-active");
-        setTimeout(() => {
-          this.$refs.step - two.classList.add("fill-line");
-          this.$refs.step - two.classList.remove("fill-line-disable");
-          this.$refs.circle - two.classList.add("active-circle");
-        }, 500);
-      }
-    },
-  },
-
-  props: ["variable", "fillActive"],
+  props: [
+    'circlePosition'
+  ]
 };
 </script>

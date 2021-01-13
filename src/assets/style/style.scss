@@ -31,7 +31,7 @@ body {
 
   .white-space {
     width: 80%;
-    float: left;
+    float: right;
     height: 150px;
   }
 
@@ -132,34 +132,55 @@ body {
   }
 
   .progress-bar {
-    width: 10%;
-    position: absolute;
-    bottom: 0;
-    left: 30px;
+    width: max-content;
+    height: max-content;
     display: flex;
     align-items: center;
-    padding: 20px 0 0 0;
     flex-direction: column;
-    padding: 20px;
+    margin-left: 50px;
+    transform: translate(170px, 50px);
+    .progress-line {
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      background-color: $textSecondary;
+      z-index: -2;
+
+      .active {
+        width: 2px;
+        height: 0;
+        width: 2px;
+        position: absolute;
+        background-color: $primary;
+        z-index: -1;
+        transition: height .5s ease;
+      }
+    }
 
     .outline-circle {
       width: 36px;
-      width: 36px;
       height: 36px;
       border: 2px solid $primary;
+      position: absolute;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      @include transform(translate(0, 38px));
-      transition: transform .5s ease-in;
+      @include transform(translate(0, -6px));
+      background-color: white;
+      z-index: 2;
+      transition: transform 400ms ease;
     }
 
-    .step-one, .step-two, .step-three, .step-four, .step-five {
+    .step {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      z-index: 100;
+      &:not(:last-child) {
+        margin-bottom: 84px;
+      }
     }
 
     .circle {
@@ -170,53 +191,25 @@ body {
       align-items: center;
       justify-content: center;
       transform: translate(0 ,0);
-
-      .inline-circle {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: $textSecondary;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $white;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: 700;
-      }
-
-      .active-circle {
-        background:$primary !important;
-      }
     }
 
-    .un-fill-line {
-      width: 3px;
-      height: 80px;
+    .inline-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
       background: $textSecondary;
-
-      .fill-line-disable {
-        width: 3px;
-        height: 88px;
-        margin-top: -4px;
-        background: $textSecondary !important;
-      }
-
-      .fill-line {
-        width: 3px;
-        height: 40px;
-        background: $primary;
-        transition: height 1s ease-in;
-      }
-
-      .fill-line-active {
-        width: 3px;
-        height: 84px;
-        background: $primary;
-        margin-top: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color .2s ease;
+      &.active {
+        background-color: $primary;
       }
     }
-  }
 
   .steps-text {
     font-size: 20px;
