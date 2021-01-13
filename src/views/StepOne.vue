@@ -1,14 +1,14 @@
 <template>
   <div class="steps">
     <div class="form-section">
-      <h2 class="steps-text">Step 1</h2>
-      <h1 class="title">Welcome!Enter your ZIP code to start.</h1>
+      <h2 class="steps-text form-item">Step 1</h2>
+      <h1 class="title form-item">Welcome! Enter your ZIP code to start.</h1>
       <p
-        class="steps-para"
+        class="steps-para form-item"
       >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <div class="input-form">
-        <input type="text" placeholder="ZIP code" @click="transition" v-model="inputVal" />
-        <button type="submit" @click="addNum" :style="`width:${width}%`">
+      <div class="input-form form-item">
+        <input type="text" placeholder="ZIP code" @click="transition"/>
+        <button type="submit" @click="addNum">
           Next
           <span>
             <img src="./../assets/font-icons/arrow-left.svg" alt />
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import { watch } from "vue";
 export default {
   data() {
     return {};

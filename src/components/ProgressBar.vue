@@ -57,6 +57,39 @@ export default {
     }
   },
 
+  watch : {
+    circlePosition: function(val) {
+      this.circlePosition = 154
+    },
+    $route(route) {
+      if (route.name == 'StepOne') {
+        this.$refs.outlineCircle.style.transform = 'translate(0, -6px)'
+        this.$refs.activeLine.style.height = '15%'
+        this.$refs.activeStepOne.classList.add('active')
+      }
+      if (route.name == 'StepTwo') {
+        this.$refs.outlineCircle.style.transform = 'translate(0, 106px)'
+        this.$refs.activeLine.style.height = '39%'
+        this.$refs.activeStepTwo.classList.add('active')
+      }
+      if (route.name == 'StepThree') {
+        this.$refs.outlineCircle.style.transform = 'translate(0, 218px)'
+        this.$refs.activeLine.style.height = '63%'
+        this.$refs.activeStepThree.classList.add('active')
+      }
+      if (route.name == 'StepFour') {
+        this.$refs.outlineCircle.style.transform = 'translate(0, 330px)'
+        this.$refs.activeLine.style.height = '86%'
+        this.$refs.activeStepFour.classList.add('active')
+      }
+      if (route.name == 'StepFive') {
+        this.$refs.outlineCircle.style.transform = 'translate(0, 442px)'
+        this.$refs.activeLine.style.height = '100%'
+        this.$refs.activeStepFive.classList.add('active')
+      }
+    }
+  },
+
   props: [
     'circlePosition'
   ]
