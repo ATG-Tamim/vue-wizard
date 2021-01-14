@@ -8,7 +8,7 @@
       >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
       <div class="input-form form-item">
           <input ref="zipCodeInp" class="input-disable" type="text" placeholder="ZIP code" v-model="inputValue"/>
-          <button ref="zipCodeBtn" class="btn-disable">
+          <button ref="zipCodeBtn" class="btn-disable" @click="nextStep">
           Next
           <span>
             <img src="./../assets/font-icons/arrow-left.svg" alt />
@@ -33,6 +33,7 @@ export default {
 
   methods: {
     nextStep() {
+      this.$router.push('/step-two')
     }
   },
 

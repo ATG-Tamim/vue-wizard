@@ -35,57 +35,87 @@ export default {
 
   data() {
     return {
+      progressLine: 1,
+      stepTwoClick: false,
+      stepThreeClick: false,
+      stepFourClick: false,
+      stepFiveClick: false,
     }
   },
 
   methods: {
     stepOne() {
       this.$router.push('/')
-      console.log(this.$refs.outlineCircle.style)
     },
     stepTwo() {
-      this.$router.push('/step-two')
+      if(this.stepTwoClick) {
+        this.$router.push('/step-two')
+      }
     },
     stepThree() {
-      this.$router.push('/step-three')
+      if(this.stepThreeClick) {
+        this.$router.push('/step-three')
+      }
     },
     stepFour() {
-      this.$router.push('/step-four')
+      if(this.stepFourClick) {
+        this.$router.push('/step-four')
+      }
     },
     stepFive() {
-      this.$router.push('/step-five')
+      if(this.stepFiveClick) {
+        this.$router.push('/step-five')
+      }
     }
   },
 
   watch : {
-    circlePosition: function(val) {
-      this.circlePosition = 154
-    },
     $route(route) {
       if (route.name == 'StepOne') {
         this.$refs.outlineCircle.style.transform = 'translate(0, -6px)'
-        this.$refs.activeLine.style.height = '15%'
+        if (this.progressLine == 1) {
+          this.$refs.activeLine.style.height = '15%'
+        }
+        this.progressLine = this.progressLine + 1
         this.$refs.activeStepOne.classList.add('active')
       }
       if (route.name == 'StepTwo') {
         this.$refs.outlineCircle.style.transform = 'translate(0, 106px)'
-        this.$refs.activeLine.style.height = '39%'
+        if (this.progressLine == 2) {
+          this.$refs.activeLine.style.height = '39%'
+        }
+        this.progressLine = this.progressLine + 1
         this.$refs.activeStepTwo.classList.add('active')
+        this.stepTwoClick = true
       }
       if (route.name == 'StepThree') {
         this.$refs.outlineCircle.style.transform = 'translate(0, 218px)'
-        this.$refs.activeLine.style.height = '63%'
+        if (this.progressLine == 3) {
+          this.$refs.activeLine.style.height = '63%'
+        }
+        this.progressLine = this.progressLine + 1
         this.$refs.activeStepThree.classList.add('active')
+        this.stepThreeClick = true
+
       }
       if (route.name == 'StepFour') {
         this.$refs.outlineCircle.style.transform = 'translate(0, 330px)'
-        this.$refs.activeLine.style.height = '86%'
+        if (this.progressLine == 4) {
+          this.$refs.activeLine.style.height = '86%'
+        }
+        this.progressLine = this.progressLine + 1
         this.$refs.activeStepFour.classList.add('active')
+        this.stepFourClick = true
       }
       if (route.name == 'StepFive') {
         this.$refs.outlineCircle.style.transform = 'translate(0, 442px)'
+        if (this.progressLine == 5) {
+          this.$refs.activeLine.style.height = '100%'
+        }
+        this.progressLine = this.progressLine + 1
         this.$refs.activeLine.style.height = '100%'
         this.$refs.activeStepFive.classList.add('active')
+        this.stepFiveClick = true
       }
     }
   },
