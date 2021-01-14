@@ -6,6 +6,27 @@ input[type="text"], input[type="number"] {
   text-transform: capitalize;
   padding: 15px 0 15px 18px;
   border: 1px solid $textSecondary;
+  z-index: 2;
+  transition: width .3s ease;
+
+
+  &.input-disable {
+    width: 36%;
+    border-radius: 5px;
+    &:hover {
+      border-radius: 5px;
+    }
+  }
+
+  &:hover {
+    outline: none;
+    border: 1px solid $primary;
+    border-radius: 5px 0 0 5px;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -25,11 +46,17 @@ button {
   text-transform: uppercase;
   border-radius: 0 5px 5px 0;
   transition: width 5s ease;
+  z-index: 1;
+  transition: transform .3s ease ;
+  &.btn-disable {
+    transform: translateX(-120px);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
-:focus {
-	outline: 2px auto $textSecondary;
-}
 
 .btn-primary-outline {
   width: 32%;
