@@ -6,11 +6,11 @@
   opacity: 0;
 }
 
-.steps.fade-leave-active {
+.steps.fade-leave-active,{
   .form-section {
     .form-item {
-      transition: all .4s ease;
-      transform: translateY(-30px);
+      transition: all .7s ease;
+      transform: translateY(-100px);
     }
   }
 }
@@ -19,7 +19,7 @@
   .form-section {
     @for $i from 1 through 6 {
       .form-item:nth-child(#{$i}) {
-        transition-delay: #{$i * .05}s;
+        transition-delay: #{$i * .06}s;
       }
     }
   }
