@@ -119,9 +119,5 @@ export default {
       }
     }
   },
-
-  props: [
-    'circlePosition'
-  ]
 };
 </script>

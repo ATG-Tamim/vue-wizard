@@ -3,7 +3,7 @@ input[type="text"], input[type="number"] {
   font-size: 15px;
   font-weight: 400;
   border-radius:  5px 0 0 5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding: 15px 0 15px 18px;
   border: 1px solid $textSecondary;
   z-index: 2;
@@ -27,6 +27,11 @@ input[type="text"], input[type="number"] {
   &:focus {
     outline: none;
   }
+}
+
+input[type="number"] {
+  text-transform: none;
+  padding: 15px 0 15px 15px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
