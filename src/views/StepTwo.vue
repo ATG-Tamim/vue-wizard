@@ -11,13 +11,13 @@
       >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
       <div class="input-form form-item">
         <input
-          ref="zipCodeInp"
+          ref="numberOfPeopleInp"
           class="input-disable"
           type="number"
           placeholder="Number of people"
           v-model="inputValue"
         />
-        <button ref="zipCodeBtn" class="btn-disable" @click="nextStep">
+        <button ref="numberOfPeopleBtn" class="btn-disable" @click="nextStep">
           Next
           <span>
             <img src="./../assets/font-icons/arrow-left.svg" alt />
@@ -48,11 +48,11 @@ export default {
   watch: {
     inputValue: function (value) {
       if (this.inputValue.length >= 1) {
-        this.$refs.zipCodeInp.classList.remove("input-disable");
-        this.$refs.zipCodeBtn.classList.remove("btn-disable");
+        this.$refs.numberOfPeopleInp.classList.remove("input-disable");
+        this.$refs.numberOfPeopleBtn.classList.remove("btn-disable");
       } else {
-        this.$refs.zipCodeInp.classList.add("input-disable");
-        this.$refs.zipCodeBtn.classList.add("btn-disable");
+        this.$refs.numberOfPeopleInp.classList.add("input-disable");
+        this.$refs.numberOfPeopleBtn.classList.add("btn-disable");
       }
     },
   },
