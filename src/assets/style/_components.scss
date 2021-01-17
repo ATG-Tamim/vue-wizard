@@ -9,6 +9,14 @@ input[type="text"], input[type="number"] {
   z-index: 2;
   transition: width .3s ease;
 
+  &.age-input {
+    width: 20%;
+    border-radius: 5px;
+
+    &:hover {
+      border-radius: 5px;
+    }
+  }
 
   &.input-disable {
     width: 36%;
@@ -30,8 +38,13 @@ input[type="text"], input[type="number"] {
 }
 
 input[type="number"] {
-  text-transform: none;
+  text-transform: capitalize;
   padding: 15px 0 15px 15px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -93,4 +106,8 @@ button {
 
 .position-relative {
   position: relative;
+}
+
+.d-none {
+  display: none !important;
 }
