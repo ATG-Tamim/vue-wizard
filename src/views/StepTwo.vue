@@ -39,8 +39,13 @@ export default {
     };
   },
 
+  mounted() {
+    this.inputValue = localStorage.getItem('numberOfPeople') || '';
+  },
+
   methods: {
     nextStep() {
+      localStorage.setItem('numberOfPeople', this.inputValue);
       this.$router.push("step-three");
     },
   },

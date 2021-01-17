@@ -31,9 +31,14 @@ export default {
     };
   },
 
+  mounted() {
+    this.inputValue = localStorage.getItem('zipCode') || '';
+  },
+
   methods: {
     nextStep() {
-      this.$router.push('/step-two')
+      localStorage.setItem('zipCode', this.inputValue)
+      this.$router.push('/step-two');
     }
   },
 
