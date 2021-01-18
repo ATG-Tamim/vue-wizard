@@ -138,7 +138,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 50px;
     transform: translate(170px, 50px);
     .progress-line {
       width: 2px;
@@ -182,16 +181,6 @@ body {
       &:not(:last-child) {
         margin-bottom: 84px;
       }
-    }
-
-    .circle {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: translate(0 ,0);
     }
 
     .inline-circle {
