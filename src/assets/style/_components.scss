@@ -115,6 +115,14 @@ button {
   margin-top: 22px;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
+.ml-mines-5 {
+  margin-left: -20px;
+}
+
 .step-three-transition, .step-three-se-transition {
   transform: translate(0 , -30px);
   transition: transform ease .5s;

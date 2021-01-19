@@ -58,11 +58,11 @@
             <label>Is anyone in your household pregnant?</label>
             <div>
               <div>
-                <input id="th-yes" type="checkbox" @change="thInputCheckedNo = !thInputCheckedYes" v-model="thInputCheckedYes"/>
+                <input id="th-yes" type="checkbox" class="mr-5 ml-mines-5" @change="thInputCheckedNo = !thInputCheckedYes" v-model="thInputCheckedYes"/>
                 <label for="th-yes">Yes</label>
               </div>
               <div>
-                <input id="th-no" type="checkbox" @change="thInputCheckedYes = !thInputCheckedNo" v-model="thInputCheckedNo"/>
+                <input id="th-no" type="checkbox" class="mr-5 ml-mines-5" @change="thInputCheckedYes = !thInputCheckedNo" v-model="thInputCheckedNo"/>
                 <label for="th-no">No</label>
               </div>
             </div>
@@ -73,11 +73,11 @@
             <label>Is anyone in your household blind or disabled?</label>
             <div>
               <div>
-                <input id="fo-yes" type="checkbox" @change="changeDisabled" v-model="foInputCheckedYes"/>
+                <input id="fo-yes" type="checkbox" class="mr-5 ml-mines-5" @change="changeDisabled" v-model="foInputCheckedYes"/>
                 <label for="fo-yes">Yes</label>
               </div>
               <div>
-                <input id="fo-no" type="checkbox" @change="changeEnable" v-model="foInputCheckedNo"/>
+                <input id="fo-no" type="checkbox" class="mr-5 ml-mines-5" @change="changeEnable" v-model="foInputCheckedNo"/>
                 <label for="fo-no">No</label>
               </div>
             </div>
