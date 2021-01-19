@@ -4,6 +4,7 @@ import stepTwo from './../views/StepTwo.vue'
 import stepThree from './../views/StepThree.vue'
 import stepFour from './../views/StepFour.vue'
 import stepFive from './../views/StepFive.vue'
+import finished from './../views/Finished.vue'
 import error from './../views/PageNotFound.vue'
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/step-five',
     name: 'StepFive',
     component: stepFive
+  },
+  {
+    path: '/finished',
+    name: 'finished',
+    component: finished
   },
   {
     path: '/:catchAll(.*)',

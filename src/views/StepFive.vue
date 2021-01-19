@@ -71,7 +71,7 @@ export default {
       localStorage.setItem('health', this.btnSelectOne)
       localStorage.setItem('dental', this.btnSelectTwo)
       localStorage.setItem('vision', this.btnSelectThree)
-      // this.$router.push('/Finished');
+      this.$router.push('/Finished');
     }
   }
 };

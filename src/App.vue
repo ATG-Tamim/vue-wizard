@@ -9,7 +9,6 @@
           <component :is="Component" />
         </transition>
       </router-view>
-
     </div>
   </div>
 
@@ -24,6 +23,7 @@ import StepThree from './views/StepThree'
 import StepFour from './views/StepFour'
 import StepFive from './views/StepFive'
 import PageNotFound from './views/PageNotFound'
+import Finished from './views/Finished'
 
 export default {
   components: {
@@ -34,12 +34,12 @@ export default {
     StepThree,
     StepFour,
     StepFive,
-    PageNotFound
+    PageNotFound,
+    Finished
   },
 
   data(){
     return {
-      circlePosition: '38'
     }
   },
 
