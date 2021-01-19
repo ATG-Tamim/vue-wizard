@@ -237,6 +237,14 @@ body {
         flex-direction: row;
         width: 90%;
         overflow: hidden;
+
+        &.step-four {
+          position: relative;
+
+          input {
+            padding: 15px 15px 15px 25px
+          }
+        }
       }
 
       .input-form-second {

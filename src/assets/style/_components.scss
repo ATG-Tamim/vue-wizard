@@ -75,8 +75,9 @@ button {
   }
 }
 
+
 .btn-primary-outline {
-  width: 32%;
+  width: 31%;
   border: 1px solid $textSecondary;
   color: $primary;
   background: $white;
@@ -86,6 +87,17 @@ button {
   text-transform: uppercase;
   padding: 13px 0;
   border-radius: 5px;
+  transition: background .3s ease;
+
+  &:hover {
+    background: $primary !important;
+    color: $white !important;
+  }
+
+  &.btn-primary {
+    background: $primary !important;
+    color: $white !important;
+  }
 }
 
 .progress-bar {
@@ -119,6 +131,10 @@ button {
   margin-right: 5px;
 }
 
+.mr-1 {
+  margin-right: 10px;
+}
+
 .ml-mines-5 {
   margin-left: -20px;
 }
@@ -148,4 +164,13 @@ button {
 
 .step-three-se-transition {
   transform: translate(0, -100px)
+}
+
+.inp-icon {
+  position: absolute;
+  z-index: 111;
+  top: 15px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: bold;
 }
