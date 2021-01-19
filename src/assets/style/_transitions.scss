@@ -28,3 +28,13 @@
     }
   }
 }
+
+.second-input.fade-enter-active {
+  transition-delay: .4s;
+}
+
+.first-input-check.fade-enter-active, .second-input-check.fade-enter-active {
+  transition-delay: .4s;
+}
+
+

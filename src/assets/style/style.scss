@@ -238,6 +238,23 @@ body {
         width: 90%;
         overflow: hidden;
       }
+
+      .input-form-second {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .first-input-check, .second-input-check {
+          display: flex;
+
+          label {
+            margin-right: 40px;
+          }
+
+          div {
+            display: flex;
+          }
+        }
+      }
     }
 
     .step-three {

@@ -12,7 +12,7 @@ input[type="text"], input[type="number"] {
   &.age-input {
     width: 20%;
     border-radius: 5px;
-
+    padding: 9px 0 9px 15px;
     &:hover {
       border-radius: 5px;
     }
@@ -75,7 +75,6 @@ button {
   }
 }
 
-
 .btn-primary-outline {
   width: 32%;
   border: 1px solid $textSecondary;
@@ -110,4 +109,35 @@ button {
 
 .d-none {
   display: none !important;
+}
+
+.mt-3 {
+  margin-top: 22px;
+}
+
+.step-three-transition, .step-three-se-transition {
+  transform: translate(0 , -30px);
+  transition: transform ease .5s;
+}
+
+.step-three-transition, .step-three-se-transition:nth-child(2) {
+  transition-delay: .10s;
+}
+.step-three-transition, .step-three-se-transition:nth-child(3) {
+  transition-delay: .16s;
+}
+.step-three-transition, .step-three-se-transition:nth-child(4) {
+  transition-delay: .22s;
+}
+
+.step-three-transition, .step-three-se-transition:nth-child(5) {
+  transition-delay: .26s;
+}
+
+.step-three-transition, .step-three-se-transition:nth-child(6) {
+  transition-delay: .30s;
+}
+
+.step-three-se-transition {
+  transform: translate(0, -100px)
 }
