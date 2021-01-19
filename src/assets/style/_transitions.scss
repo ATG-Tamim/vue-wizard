@@ -21,7 +21,7 @@
 
 .steps.fade-leave-active {
   .form-section {
-    @for $i from 1 through 6 {
+    @for $i from 1 through 20 {
       .form-item:nth-child(#{$i}) {
         transition-delay: #{$i * .06}s;
       }
@@ -37,4 +37,13 @@
   transition-delay: .4s;
 }
 
+
+.steps.fade-leave-active{
+  .step-three {
+    .form-item {
+      transition: all .7s ease;
+      transform: translateY(-200px);
+    }
+  }
+}
 

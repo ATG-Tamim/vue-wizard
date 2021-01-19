@@ -56,11 +56,11 @@ export default {
       this.$router.push('/step-three')
     },
     stepFour() {
-      // if (! this.visitedSteps.includes(4)) return;
+      if (! this.visitedSteps.includes(4)) return;
       this.$router.push('/step-four')
     },
     stepFive() {
-      // if (! this.visitedSteps.includes(5)) return/\\;
+      if (! this.visitedSteps.includes(5)) return;
       this.$router.push('/step-five')
     },
 

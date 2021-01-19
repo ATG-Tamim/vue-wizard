@@ -1,14 +1,14 @@
 <template>
   <div class="steps">
     <div class="form-section step-three">
-      <h2 class="steps-text" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">Step 3</h2>
+      <h2 class="steps-text form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">Step 3</h2>
       <h1
-        class="title" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']"
+        class="title form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']"
       >Enter the age of each person in your household, and tell us if they need coverage.</h1>
       <p
-        class="steps-para" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']"
+        class="steps-para form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']"
       >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <div class="input-form step-three" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
+      <div class="input-form step-three form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
         <div>
           <label>Age of Head of household</label>
           <input type="number" placeholder="age" class="age-input" v-model="inputValue" />
@@ -29,7 +29,7 @@
           </div>
         </transition>
       </div>
-      <div v-if="inputCheckedYes || inputCheckedNo" class="input-form step-three mt-3" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
+      <div v-if="inputCheckedYes || inputCheckedNo" class="input-form step-three mt-3 form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
         <transition name="fade" appear>
           <div class="second-input">
             <label>Age of Person 2</label>
@@ -54,7 +54,7 @@
       </div>
       <div v-if="seInputCheckedYes || seInputCheckedNo" class="input-form-second step-three mt-3" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
         <transition name="fade" appear>
-          <div class="first-input-check mt-3">
+          <div class="first-input-check mt-3 form-item">
             <label>Is anyone in your household pregnant?</label>
             <div>
               <div>
@@ -69,7 +69,7 @@
           </div>
         </transition>
         <transition name="fade" appear>
-          <div v-if="thInputCheckedYes || thInputCheckedNo" class="second-input-check mt-3">
+          <div v-if="thInputCheckedYes || thInputCheckedNo" class="second-input-check mt-3 form-item">
             <label>Is anyone in your household blind or disabled?</label>
             <div>
               <div>
@@ -81,12 +81,6 @@
                 <label for="fo-no">No</label>
               </div>
             </div>
-            <!-- <button v-if="foInputCheckedYes || foInputCheckedNo" class="step-three-btn-primary" @click="nextStep">
-              Next
-              <span>
-                <img src="./../assets/font-icons/arrow-left.svg" alt />
-              </span>
-            </button> -->
           </div>
         </transition>
       </div>
