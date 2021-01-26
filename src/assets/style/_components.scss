@@ -68,6 +68,9 @@ button {
   transition: transform .3s ease !important;
   &.btn-disable {
     transform: translateX(-128px);
+    @media (max-width: 1900px) {
+      transform: translateX(-200px)!important ;
+    }
   }
 
   &:focus {
