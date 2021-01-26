@@ -2,7 +2,7 @@
   <headerSection/>
   <div class="flex position-relative">
     <progressBar :circlePosition="circlePosition"/>
-    <div>
+    <div class="w-100">
       <div class="white-space"></div>
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">

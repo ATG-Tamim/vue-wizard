@@ -1,5 +1,5 @@
 <template>
-  <div class="progress-bar">
+  <div class="custom-progress-bar">
     <div class="outline-circle" ref="outlineCircle"></div>
     <div class="progress-line">
       <div class="active" ref="activeLine"></div>
@@ -84,27 +84,27 @@ export default {
       if (route.name == 'StepOne') {
         this.visitedSteps = [...new Set([...this.visitedSteps, 1])];
         // this.$refs.activeLine.style.height = '15%'
-        this.$refs.outlineCircle.style.transform = 'translate(0, -6px)'
+        this.$refs.outlineCircle.style.transform = 'translate(0, -5px)'
       }
       if (route.name == 'StepTwo') {
         this.visitedSteps = [...new Set([...this.visitedSteps, 1, 2])];
         // this.$refs.activeLine.style.height = '39%'
-        this.$refs.outlineCircle.style.transform = 'translate(0, 106px)';
+        this.$refs.outlineCircle.style.transform = 'translate(0, 107px)';
       }
       if (route.name == 'StepThree') {
         this.visitedSteps = [...new Set([...this.visitedSteps, 1, 2, 3])];
         // this.$refs.activeLine.style.height = '63%'
-        this.$refs.outlineCircle.style.transform = 'translate(0, 218px)'
+        this.$refs.outlineCircle.style.transform = 'translate(0, 219px)'
       }
       if (route.name == 'StepFour') {
         this.visitedSteps = [...new Set([...this.visitedSteps, 1, 2, 3, 4])];
         // this.$refs.activeLine.style.height = '85%'
-        this.$refs.outlineCircle.style.transform = 'translate(0, 330px)'
+        this.$refs.outlineCircle.style.transform = 'translate(0, 331px)'
       }
       if (route.name == 'StepFive') {
         this.visitedSteps = [...new Set([...this.visitedSteps, 1, 2, 3, 4, 5])];
         // this.$refs.activeLine.style.height = '100%'
-        this.$refs.outlineCircle.style.transform = 'translate(0, 442px)'
+        this.$refs.outlineCircle.style.transform = 'translate(0, 443px)'
       }
 
       localStorage.setItem('visitedSteps', JSON.stringify(this.visitedSteps));

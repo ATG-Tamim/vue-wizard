@@ -29,7 +29,7 @@
           </div>
         </transition>
       </div>
-      <div v-if="inputCheckedYes || inputCheckedNo" class="input-form step-three mt-3 form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
+      <div v-if="inputCheckedYes || inputCheckedNo" class="input-form step-three custom-mt-3 form-item" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
         <transition name="fade" appear>
           <div class="second-input">
             <label>Age of Person 2</label>
@@ -52,32 +52,32 @@
           </div>
         </transition>
       </div>
-      <div v-if="seInputCheckedYes || seInputCheckedNo" class="input-form-second step-three mt-3" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
+      <div v-if="seInputCheckedYes || seInputCheckedNo" class="input-form-second step-three custom-mt-3" :class="[(inputCheckedYes || inputCheckedNo) && 'step-three-transition', (seInputCheckedYes || seInputCheckedNo) && 'step-three-se-transition']">
         <transition name="fade" appear>
-          <div class="first-input-check mt-3 form-item">
+          <div class="first-input-check custom-mt-3 form-item">
             <label>Is anyone in your household pregnant?</label>
             <div>
               <div>
-                <input id="th-yes" type="checkbox" class="mr-5 ml-mines-5" @change="thInputCheckedNo = !thInputCheckedYes" v-model="thInputCheckedYes"/>
+                <input id="th-yes" type="checkbox" class="custom-custom-mr-1 ml-mines-5" @change="thInputCheckedNo = !thInputCheckedYes" v-model="thInputCheckedYes"/>
                 <label for="th-yes">Yes</label>
               </div>
               <div>
-                <input id="th-no" type="checkbox" class="mr-5 ml-mines-5" @change="thInputCheckedYes = !thInputCheckedNo" v-model="thInputCheckedNo"/>
+                <input id="th-no" type="checkbox" class="custom-custom-mr-1 ml-mines-5" @change="thInputCheckedYes = !thInputCheckedNo" v-model="thInputCheckedNo"/>
                 <label for="th-no">No</label>
               </div>
             </div>
           </div>
         </transition>
         <transition name="fade" appear>
-          <div v-if="thInputCheckedYes || thInputCheckedNo" class="second-input-check mt-3 form-item">
+          <div v-if="thInputCheckedYes || thInputCheckedNo" class="second-input-check custom-mt-3 form-item">
             <label>Is anyone in your household blind or disabled?</label>
             <div>
               <div>
-                <input id="fo-yes" type="checkbox" class="mr-5 ml-mines-5" @change="changeDisabled" v-model="foInputCheckedYes"/>
+                <input id="fo-yes" type="checkbox" class="custom-custom-mr-1 ml-mines-5" @change="changeDisabled" v-model="foInputCheckedYes"/>
                 <label for="fo-yes">Yes</label>
               </div>
               <div>
-                <input id="fo-no" type="checkbox" class="mr-5 ml-mines-5" @change="changeEnable" v-model="foInputCheckedNo"/>
+                <input id="fo-no" type="checkbox" class="custom-custom-mr-1 ml-mines-5" @change="changeEnable" v-model="foInputCheckedNo"/>
                 <label for="fo-no">No</label>
               </div>
             </div>

@@ -7,12 +7,12 @@
         class="steps-para"
       >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
       <div class="inputForm">
-        <button class="btn-primary-outline mr-1" :class="btnSelectOne && 'btn-primary'" @click="btnOne">health</button>
-        <button class="btn-primary-outline mr-1" :class="btnSelectTwo && 'btn-primary'" @click="btnTwo">dental</button>
-        <button class="btn-primary-outline" :class="btnSelectThree && 'btn-primary'" @click="btnThree">vision</button>
+        <button class="custom-btn-primary-outline mr-1" :class="btnSelectOne && 'custom-btn-primary'" @click="btnOne">health</button>
+        <button class="custom-btn-primary-outline mr-1" :class="btnSelectTwo && 'custom-btn-primary'" @click="btnTwo">dental</button>
+        <button class="custom-btn-primary-outline" :class="btnSelectThree && 'custom-btn-primary'" @click="btnThree">vision</button>
       </div>
       <div>
-        <button class="btn-primary-outline btn-primary mt-3" @click="nextStep">
+        <button class="custom-btn-primary-outline custom-btn-primary custom-mt-3" @click="nextStep">
           Search
           <span>
             <img src="./../assets/font-icons/arrow-left.svg" alt />

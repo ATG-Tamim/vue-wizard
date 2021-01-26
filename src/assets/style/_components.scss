@@ -19,7 +19,7 @@ input[type="text"], input[type="number"] {
   }
 
   &.input-disable {
-    width: 36%;
+    width: 38%;
     border-radius: 5px;
     &:hover {
       border-radius: 5px;
@@ -61,13 +61,13 @@ button {
   font-size: 15px;
   cursor: pointer;
   font-weight: 400;
-  text-transform: uppercase;
-  border-radius: 0 5px 5px 0;
+  text-transform: uppercase !important;
+  border-radius: 0 5px 5px 0 !important;
   transition: width 5s ease;
   z-index: 1;
-  transition: transform .3s ease ;
+  transition: transform .3s ease !important;
   &.btn-disable {
-    transform: translateX(-120px);
+    transform: translateX(-128px);
   }
 
   &:focus {
@@ -76,7 +76,7 @@ button {
 }
 
 
-.btn-primary-outline {
+.custom-btn-primary-outline {
   width: 31%;
   border: 1px solid $textSecondary;
   color: $primary;
@@ -86,7 +86,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   padding: 13px 0;
-  border-radius: 5px;
+  border-radius: 5px !important;
   transition: background .3s ease;
 
   &:hover {
@@ -94,13 +94,13 @@ button {
     color: $white !important;
   }
 
-  &.btn-primary {
+  &.custom-btn-primary {
     background: $primary !important;
     color: $white !important;
   }
 }
 
-.progress-bar {
+.custom-progress-bar {
 
   .outline-circle {
     animation-name: progress;
@@ -123,11 +123,11 @@ button {
   display: none !important;
 }
 
-.mt-3 {
+.custom-mt-3 {
   margin-top: 22px;
 }
 
-.mr-5 {
+.custom-custom-mr-1 {
   margin-right: 5px;
 }
 
@@ -140,30 +140,30 @@ button {
 }
 
 .step-three-transition, .step-three-se-transition {
-  transform: translate(0 , -30px);
-  transition: transform ease .5s;
+  transform: translate(0 , -30px) !important;
+  transition: transform ease .5s !important;
 }
 
 .step-three-transition, .step-three-se-transition:nth-child(2) {
-  transition-delay: .10s;
+  transition-delay: .10s !important;
 }
 .step-three-transition, .step-three-se-transition:nth-child(3) {
-  transition-delay: .16s;
+  transition-delay: .16s !important;
 }
 .step-three-transition, .step-three-se-transition:nth-child(4) {
-  transition-delay: .22s;
+  transition-delay: .22s !important;
 }
 
 .step-three-transition, .step-three-se-transition:nth-child(5) {
-  transition-delay: .26s;
+  transition-delay: .26s !important;
 }
 
 .step-three-transition, .step-three-se-transition:nth-child(6) {
-  transition-delay: .30s;
+  transition-delay: .30s !important;
 }
 
 .step-three-se-transition {
-  transform: translate(0, -100px)
+  transform: translate(0, -100px) !important;
 }
 
 .inp-icon {

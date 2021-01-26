@@ -1,7 +1,7 @@
 <template>
   <div class="finished">
     <h1>Finished</h1>
-    <button class="btn-primary-outline" @click="home">Home</button>
+    <button class="custom-btn-primary-outline" @click="home">Home</button>
   </div>
 </template>
 

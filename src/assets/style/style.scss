@@ -37,27 +37,16 @@ body {
   }
 
   .header {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
     border-bottom: 1px solid #f6f6f6;
 
     .logo {
-      width: 10%;
       user-select: none;
-      display: flex;
-      align-items: center;
       font-size: 26px;
       font-weight: 700;
       color: $primary;
     }
 
     .header-links {
-      display: flex;
-      width: 30%;
-      align-items: center;
-      justify-content: space-around;
       font-weight: 400;
       cursor: pointer;
       user-select: none;
@@ -68,12 +57,8 @@ body {
         font-weight: bold;
         position: relative;
         padding: 23px 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         .active-line {
-          width: 100%;
           padding: 2px 0;
           background-color: $primary;
           position: absolute;
@@ -83,13 +68,7 @@ body {
     }
 
     .profile {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 14%;
-
       .basket-icon {
-        width: 20%;
         margin-top: 13px;
 
         img {
@@ -98,19 +77,11 @@ body {
       }
 
       .profile-options {
-        display: flex;
-        align-items: center;
-        width: 60%;
-        justify-content: space-around;
-
         .profile-pic {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           font-size: 15px;
           font-weight: 700;
-          width: 30px;
-          height: 30px;
+          width: 30px !important;
+          height: 30px !important;
           text-align: center;
           border-radius: 50%;
           color: $white;
@@ -132,7 +103,7 @@ body {
     }
   }
 
-  .progress-bar {
+  .custom-progress-bar {
     width: max-content;
     height: max-content;
     display: flex;
@@ -158,15 +129,15 @@ body {
     }
 
     .outline-circle {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border: 2px solid $primary;
       position: absolute;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      @include transform(translate(0, -6px));
+      @include transform(translate(0, -5px));
       background-color: white;
       z-index: 2;
       transition: transform 400ms ease;
@@ -210,6 +181,7 @@ body {
   }
 
   .title {
+    font-size: 31px;
     margin-bottom: 20px;
     font-weight: 400;
   }
@@ -268,7 +240,7 @@ body {
 
     .step-three {
       width: 60%;
-
+      max-height: 436px;
       p {
         padding-right: 150px;
       }
@@ -302,12 +274,11 @@ body {
             div {
               width: 40%;
               display: flex;
-              justify-content: baseline;
 
               div:nth-child(1), div:nth-child(2) {
-                width: 40%;
-                display: flex;
-                justify-content: space-between;
+                width: 40% !important;
+                display: flex !important;
+                justify-content: space-between !important;
               }
             }
           }
@@ -317,6 +288,7 @@ body {
       label {
         font-weight: 700;
         font-size: 18px;
+        margin-bottom: 0;
       }
 
       input[type="text"] {
@@ -418,7 +390,7 @@ body {
       color: white;
     }
 
-    .btn-primary-outline {
+    .custom-btn-primary-outline {
       width: 13%;
       margin-top: 30px;
     }
